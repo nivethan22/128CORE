@@ -52,7 +52,7 @@ jobs:
         shell: pwsh
         run: |
           Write-Host "🚦 Initiating EnigMano-Instance.ps1"
-          powershell.exe -ExecutionPolicy Bypass -File ".\EnigMano-Instance.ps1"
+          powershell.exe -ExecutionPolicy Bypass -File ".\EnigMano-Instance.ps1" -InstanceId $env:INSTANCE_ID
 
       - name: 🚀 Install Tailscale
         run: |
